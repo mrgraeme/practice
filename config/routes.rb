@@ -1,4 +1,6 @@
 Rollback::Application.routes.draw do
+  resources :passions
+
   get "home/index"
   
   root :to => "home#index"

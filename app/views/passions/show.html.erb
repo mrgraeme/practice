@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @passion.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @passion.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_passion_path(@passion) %> |
+<%= link_to 'Back', passions_path %>
