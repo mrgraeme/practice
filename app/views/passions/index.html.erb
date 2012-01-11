@@ -1,22 +1,13 @@
-<h1>Listing passions</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h1>Stuff that you love</h1>
 
 <% @passions.each do |passion| %>
-  <tr>
-    <td><%= passion.name %></td>
-    <td><%= passion.description %></td>
-    <td><%= link_to 'Show', passion %></td>
-    <td><%= link_to 'Edit', edit_passion_path(passion) %></td>
-    <td><%= link_to 'Destroy', passion, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<div class="box">
+<h1><%= link_to passion.name, passion %></h1>
+<p><%= passion.description %></p>
+<%= link_to 'Show', passion %> - 
+<%= link_to 'Edit', edit_passion_path(passion) %> - 
+<%= link_to 'Destroy', passion, :confirm => 'Are you sure?', :method => :delete %>
+</div>
 <% end %>
 </table>
 
