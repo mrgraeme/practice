@@ -1,0 +1,21 @@
+<div class="box">
+
+<%= form_for([@passion, @passion.sessions.build]) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label "Time spent (minutes)" %><br />
+    <%= f.number_field :time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+</div>

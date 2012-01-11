@@ -1,14 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @passion.name %>
-</p>
+<h1>
+  <%= @passion.name %><span style="font-size: 50%"> - <%= @practice_time %> hours</span>
+</h1>
+
+
 
 <p>
-  <b>Description:</b>
   <%= @passion.description %>
 </p>
+
+<h2>Previous sessions</h2>
+
+<%= render @passion.sessions %>
+
+
+<h2>Add a session:</h2>
+
+<%= render "sessions/form" %>
 
 
 <%= link_to 'Edit', edit_passion_path(@passion) %> |

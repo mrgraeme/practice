@@ -1,5 +1,7 @@
 Rollback::Application.routes.draw do
-  resources :passions
+  resources :passions do
+    resources :sessions
+  end
 
   get "home/index"
   
