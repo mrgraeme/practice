@@ -1,6 +1,8 @@
 class PassionsController < ApplicationController
-    
-  
+USER, PASSWORD = 'graeme', 'secret'
+
+before_filter :authentication_check, :except => [:index, :show]
+
   # GET /passions
   # GET /passions.json
   def index
@@ -17,7 +19,7 @@ class PassionsController < ApplicationController
   def show
     @passion = Passion.find(params[:id])
     @sessions = @passion.sessions.all
-    
+
     @practice_time = 0
     @sessions.each do |session|
       @practice_time += session.time.to_i
@@ -89,4 +91,14 @@ class PassionsController < ApplicationController
       format.json { head :ok }
     end
   end
+
+  private
+
+  def authentication_check
+    authenticate_or_request_with_http_basic do |user, password|
+      user == USER && password == PASSWORD
+    end
+  end
 end
+
+
