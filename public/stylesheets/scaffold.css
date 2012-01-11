@@ -1,6 +1,6 @@
 
 body{
-	background: #2B2B2B;
+	background: url('/images/practice.png') no-repeat #2B2B2B;
 	font-family: helvetica, sans-serif;
 	margin: 0px;
 	padding: 0px;
@@ -13,12 +13,22 @@ body{
 }
 
 .top-bar{
-	background: url('top-bar.png') repeat-x;
 	height: 30px;
 }
 
 h1, h2{
 	color: #F8FAB4;
+	
+}
+
+.box h1, .box h2{
+margin:0;	
+}
+
+.box h1 a{
+		color: #F8FAB4;
+		text-decoration: none;
+
 }
 
 h3{
@@ -87,6 +97,6 @@ div.field, div.actions {
 	background: #444;
 	margin-bottom: 2px;
 font-size: 90%;
-padding: 10px;
+padding: 20px;
 }
 
