@@ -3,16 +3,25 @@
 <% @passions.each do |passion| %>
 
 <div class="box">
-<h1><%= link_to passion.name, passion %> - <%= get_time passion %> Hours</h1>
+<div class="time_box">
+<div class="time">
+<h1><%= get_time passion %></h1>
+<h2>hours</h2>
+</div>
+</div>
+
+<div class="display_box">
+<h1><%= link_to passion.name, passion %></h1>
 <p><%= passion.description %></p>
 <%= link_to 'Add a Practice Session', passion %> - 
 <%= link_to 'Edit', edit_passion_path(passion) %> - 
 <%= link_to 'x', passion, :confirm => 'Are you sure?', :method => :delete %>
 </div>
+</div>
 <% end %>
-</table>
 
-<br />
+
+<div class="clear"></div>
 
 <%= link_to 'New Passion', new_passion_path %>
 

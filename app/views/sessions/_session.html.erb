@@ -1,5 +1,14 @@
-<div class="box">
 
+<div class="box session_box">
+
+<div class="time_box session_time">
+<div class="time">
+<h1><%= session.time %></h1>
+<h2>hours</h2>
+</div>
+</div>
+
+<div class="display_box">
 <h3>
   <%= session.name %>
 </h3>
@@ -8,13 +17,10 @@
   <%= session.description %>
 </p>
 
-<p>
-  <b>Time spent:</b>
-  <%= session.time %>
-</p>
+
 
 <p>
 <%= link_to 'Remove', [session.passion, session], :confirm => 'Are you sure?', :method => :delete %>
 </p>
 
-</div>
+</div></div>

@@ -1,20 +1,33 @@
 <p id="notice"><%= notice %></p>
 
+<div class="box">
+<div class="time_box">
+<div class="time">
+<h1><%= get_time @passion %></h1>
+<h2>hours</h2>
+</div>
+</div>
+
+<div class="display_box">
 <h1>
-  <%= @passion.name %><span style="font-size: 50%"> - <%= get_time @passion %> hours</span>
+  <%= @passion.name %>
 </h1>
-
-
 
 <p>
   <%= @passion.description %>
 </p>
+</div>
+</div>
+<div class="clear"></div>
+
 
 <h2>Previous sessions</h2>
 
 <%= render @passion.sessions %>
 
 
+<div class="clear"></div>
+<br />
 <h2>Add a session:</h2>
 
 <%= render "sessions/form" %>
