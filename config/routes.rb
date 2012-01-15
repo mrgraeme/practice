@@ -1,4 +1,4 @@
-Rollback::Application.routes.draw do
+Practice::Application.routes.draw do
   resources :passions do
     resources :sessions
   end

@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Rollback::Application.load_tasks
+Practice::Application.load_tasks

@@ -130,7 +130,7 @@ directory.
 
 Options:
 
-* Passing the <tt>-s, --sandbox</tt> argument will rollback any modifications
+* Passing the <tt>-s, --sandbox</tt> argument will practice any modifications
   made to the database.
 * Passing an environment name as an argument will load the corresponding
   environment. Example: <tt>rails console production</tt>.
