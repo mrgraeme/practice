@@ -1,12 +1,17 @@
 class PassionsController < ApplicationController
-USER, PASSWORD = 'graeme', 'secret'
+  USER, PASSWORD = 'graeme', 'secret'
 
-before_filter :authentication_check, :except => [:index, :show]
+  before_filter :authentication_check, :except => [:index, :show]
 
+
+
+    
+    
   # GET /passions
   # GET /passions.json
   def index
     @passions = Passion.all
+    
 
     respond_to do |format|
       format.html # index.html.erb
@@ -18,14 +23,7 @@ before_filter :authentication_check, :except => [:index, :show]
   # GET /passions/1.json
   def show
     @passion = Passion.find(params[:id])
-    @sessions = @passion.sessions.all
-
-    @practice_time = 0
-    @sessions.each do |session|
-      @practice_time += session.time.to_i
-    end
-
-
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @passion }
